@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+        <h1>顧客評價</h1>
+        <table class="user-comment">
+          {% for msg in msgs %}
+          <tr>
+            <td style='width: 128px;' >{{msg.user}}:</td><td>{{msg.subject}}</td>
+            <td style='width: 128px;' align = 'center' valign = 'center'>{{msg.publication_date}}</td>
+          </tr>
+          {% endfor %}
+
+        </table>
+  <button href="/post" type="button" onclick="location.href='/post'">留言</button>
+{% endblock %}
